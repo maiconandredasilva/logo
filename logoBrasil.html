@@ -1,0 +1,65 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+
+    <style>
+      body {
+          background-color: rgb(134, 134, 134);
+      }
+
+    #linguagemLogo {
+        width: 400px;
+        height: 400px;
+    }
+  </style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.12.17/paper-full.min.js"></script>
+    <script type="text/paperscript" canvas="linguagemLogo">
+
+      // Bandeira do Brasil desenhada em tag Canvas ==> Linguagem Logo <== // byMaiconSilva
+      // Criar a caneta
+      var myPath = new Path();
+      myPath.strokeColor = 'green';
+
+      // Mover a caneta para a posição inicial
+      myPath.moveTo(new Point(0, 0));
+
+      // Desenhar um quadrado:
+      myPath.lineTo(new Point(0, 300));
+      myPath.lineTo(new Point(400, 300));
+      myPath.lineTo(new Point(400, 0));
+      myPath.lineTo(new Point(0, 0));
+      myPath.fillColor = 'green';
+
+      // Criar a caneta2
+      var myPath2 = new Path();
+      myPath2.strokeColor = 'yellow';
+
+      // Mover a nova caneta para a posição inicial
+      myPath2.moveTo(new Point(380, 150));
+
+      // Desenhar um losângo:
+      myPath2.lineTo(new Point(200, 280));
+      myPath2.lineTo(new Point(20, 150));
+      myPath2.lineTo(new Point(200, 20));
+      myPath2.lineTo(new Point(380, 150));
+      myPath2.fillColor = 'yellow';
+
+      // Criar a caneta3
+      var myPath3 = new Path();
+      myPath3.strokeColor = 'blue';
+
+      // Mover a caneta3 para a posição inicial
+      myPath3.moveTo(new Point(200, 230));      
+
+    // Desenhar um círculo:
+    myPath3.arcTo(new Point(200, 70)); // baixo cima
+    myPath3.arcTo(new Point(200, 230)); // cima baixo
+    myPath3.fillColor = 'blue';
+
+    </script>
+  </head>
+  <body>
+    <canvas id="linguagemLogo" resize></canvas>
+</body>
+</html>
